@@ -30,3 +30,28 @@ const juanita = new Student(
     15,
     ["Curso de introduccion a los video juegos","curso de creacion de yo no se que"],
 );
+
+// Prototipos con la sintaxis de clases
+class Student2 {
+    constructor({
+        name,
+        age,
+        cursosAprobados = [],
+        email,
+    }){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.cursosAprobados = cursosAprobados;
+    }
+
+    aprobarCurso(nuevoCursito){
+        this.cursosAprobados.push(nuevoCursito);
+    }
+}
+
+const miguelito = new Student2({
+    email: "miguelito@platzi.com",
+    age: 28,
+    name: "Miguel",
+});
